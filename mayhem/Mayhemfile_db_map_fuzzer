@@ -1,0 +1,9 @@
+project: savantenvs/rocksdb
+target: db_map_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/db_map_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/db_map_fuzzer
+    libfuzzer: true
+    timeout: 60

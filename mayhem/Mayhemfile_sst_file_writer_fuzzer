@@ -1,0 +1,9 @@
+project: savantenvs/rocksdb
+target: sst_file_writer_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sst_file_writer_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/sst_file_writer_fuzzer
+    libfuzzer: true
+    timeout: 60
